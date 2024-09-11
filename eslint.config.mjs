@@ -5,6 +5,7 @@ export default antfu(
   {
     react: false,
     typescript: true,
+    jsonc: false,
 
     lessOpinionated: true,
     isInEditor: false,
@@ -15,6 +16,7 @@ export default antfu(
 
     formatters: {
       css: false,
+      json: false,
     },
   },
 
@@ -28,17 +30,16 @@ export default antfu(
     },
   },
   {
-    files: [
-      '**/*.spec.ts',
-      '**/*.e2e.ts',
-    ],
+    files: ['**/*.spec.ts', '**/*.e2e.ts'],
   },
   {
     rules: {
       'import/order': 'off', // Avoid conflicts with `simple-import-sort` plugin
       'sort-imports': 'off', // Avoid conflicts with `simple-import-sort` plugin
-      'node/prefer-global/process': 'off', // Allow using `process.env`
 
+      'ts/consistent-type-definitions': 'off',
+      'ts/consistent-type-imports': 'off',
+      'node/prefer-global/process': 'off', // Allow using `process.env`
     },
   },
 );
