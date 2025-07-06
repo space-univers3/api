@@ -1,4 +1,3 @@
 module.exports = {
-  '*': ['eslint --fix --no-warn-ignored'],
-  '**/*.ts?(x)': () => 'npm run check-types',
+  '**/*.ts?(x)': () => 'yarn run check-types',
 };

@@ -24,7 +24,10 @@
       ]
     },
     "types": [
-      "vitest/globals"
+      "node",
+      "jest",
+      "supertest",
+      "vitest"
     ],
   }
 }
